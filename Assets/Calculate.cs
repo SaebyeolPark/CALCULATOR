@@ -212,6 +212,14 @@ public class Calculate : MonoBehaviour
             
             AddHistory(formulaText.text+"="+itemText.text);
         }
+        else if (value == "Sqr")
+        {
+            pushNumber = false;
+            formulaText.text = "Sqr(" + itemText.text + ")";
+            itemText.text = ((double.Parse(itemText.text))* (double.Parse(itemText.text))).ToString();
+
+            AddHistory(formulaText.text + "=" + itemText.text);
+        }
         else if (value == "Radic")
         {
             pushNumber = false;
