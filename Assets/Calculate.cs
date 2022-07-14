@@ -8,22 +8,20 @@ public class Calculate : MonoBehaviour
     public GameObject formula;
     Text formulaText;
     public Text itemText;
-  //  Formula formula;
-    public double leftValue;
-    public double rightValue;
-    public bool pushNumber;
-    public string preText;
-    public bool isPuls;
-    public bool isMinus;
-    public bool isMulti;
-    public bool isDivi;
-    public bool isFull;
+    private double leftValue;
+    private double rightValue;
+    private bool pushNumber;
+    private string preText;
+    private bool isPuls;
+    private bool isMinus;
+    private bool isMulti;
+    private bool isDivi;
+    private bool isFull;
     private HistoryText[] historyText;
     public Transform historyTf;
 
     void Start()
     {
-        //  formula = GameObject.Find("Fomula").GetComponent<Formula>();
         itemText = GetComponent<Text>();
         itemText.text = "0";
         leftValue = 0;
@@ -117,9 +115,6 @@ public class Calculate : MonoBehaviour
             isMinus = false;
             isMulti = false;
             isDivi = false;
-            // itemText.text = (leftValue + rightValue).ToString();
-            //  leftValue = leftValue + rightValue;
-            //   isLeft = true;
 
         }
         else if (value == "C")
@@ -255,7 +250,6 @@ public class Calculate : MonoBehaviour
         }
         
         preText = value;
-     //   leftValue = int.Parse(itemText.text);
     }
     public double Plus()
     {
